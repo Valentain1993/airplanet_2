@@ -1,0 +1,361 @@
+/* два разных решения оформления блоков новостей и отзывов, обрати внимание */
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    background: #4b73b5;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    margin: 45px 0 35px 20px;
+}
+
+.tel {
+    font-size: 21px;
+    color: #ffffff;
+    margin: 30px 45px 10px 0px;
+}
+
+main {
+    display: flex;
+}
+
+.aside-hrefs {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 70px 20px 20px;
+
+}
+
+.aside-hrefs__list li {
+    margin-bottom: 20px;
+    list-style: none;
+    text-transform: uppercase;
+    
+    
+}
+
+/* НЕ ПОЛУЧАЕТСЯ СДЕЛАТЬ ИКОНКИ ЧЕРЕЗ ПСЕВДОКЛАСС 
+.aside-hrefs__main::before {
+    content: url("img/main_icon.png");
+    position: relative;
+    right: 40px;
+    top: 23px;
+}
+
+*/
+
+
+.rates__list {
+    display: flex;
+    justify-content: space-around;
+    width: 1000px; /* КАК СДЕЛАТЬ ШИРИНУ НА ВСЮ ШИРИНУ КОНТЕЙНЕРА, WIDTH=100% НЕ РАБОТАЕТ*/
+}
+
+.rates__standart,
+.rates__premium,
+.rates__luxury {
+    width: 250px;
+}
+
+.rates__premium {
+    border: 1px solid #e8e9ed;
+}
+
+.rates__standart_icon {
+    background: url("img/icon_flower.png") no-repeat 50% 50%;
+    background-color: #4b73b5;
+    background-size: 30px 30px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin: 40px auto 0;
+}
+
+.rates__premium_icon {
+    background: url("img/icon_star.png") no-repeat 50% 50%;
+    background-color: #4b73b5;
+    background-size: 30px 30px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin: 40px auto 0;
+}
+
+.rates__luxury_icon {
+    background: url("img/icon_palette.png") no-repeat 50% 50%;
+    background-color: #4b73b5;
+    background-size: 30px 30px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin: 40px auto 0;
+}
+
+.rates__list h3 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 11px;
+    margin: 35px auto 25px;
+}
+
+.rates__standart_description,
+.rates__premium_description,
+.rates__luxury_description {
+    text-align: center;
+}
+
+
+
+.rates__standart_price,
+.rates__premium_price,
+.rates__luxury_price {
+    font-size: 50px;
+    text-align: center;
+}
+
+.rates__standart_price span,
+.rates__premium_price span,
+.rates__luxury_price span {
+    font-size: 25px;
+}
+
+.news_list {
+    display: flex;
+    flex-direction: column;
+}
+
+.news_list__night_flight,
+.news_list__Georgia,
+.news_list__child {
+    display: flex;
+    padding: 30px 0px;
+}
+
+.news_list__night_flight,
+.news_list__Georgia {
+    border-bottom: 1px solid #f5f5f5;
+}
+
+
+.night_flight__img,
+.Georgia__img,
+.child__img {
+    margin-right: 20px;
+}
+
+.news_list_hrefs,
+.feed_list_hrefs {
+    display: flex;
+    justify-content: center;
+}
+
+.page1 {
+    margin-right: 20px;
+}
+
+.news_list_hrefs a,
+.feed_list_hrefs a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+
+/*  не понимаю, как правильно сделать, чтобы активная ссылка была закрашена цветом?
+    Подсвечивается только область ссылки, а мне нужно подсвечивать область div */
+.news_list_hrefs div:focus,
+.feed_list_hrefs div:focus {
+    background-color: #4b73b5;
+}
+
+.news,
+.feed {
+    margin-bottom: 60px;
+}
+
+footer {
+    background: #4b73b5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copy {
+    margin: 10px 0px 15px 20px;
+    width: 220px;
+}
+
+.social__nav {
+    display: flex;
+}
+
+.social {
+    margin: 20px 20px 20px 0px;
+}
+
+.social__nav div {
+    width: 20px;
+    height: 20px;
+    background-color: #d2def3;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.social__nav div:first-child {
+    background-color: #ffffff;
+}
+
+.nav-hrefs_list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-hrefs_list li {
+    margin-top: 40px;
+    margin-right: 5px;
+
+}
+
+.feed_list div:not(div:last-child) {
+    border-bottom: 1px solid #f5f5f5;
+    padding-bottom: 30px;
+}
+
+.feed_list div {
+    padding-top: 30px;
+}
+
+.feed_list__irina,
+.feed_list__alex,
+.feed_list__igor,
+.feed_list__anastasia {
+    display: flex;
+}
+
+.feed_list_text {
+    display: flex;
+    flex-direction: column;
+}
+
+.feed_list_text span {
+    margin-left: 20px;
+}
+
+.feed_list_data {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.feed_list_name {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* как тебе такое решение? */
+.aside-question {
+    background-image: url('img/фон-aside.png');
+    background-position: 25% 50%;
+    position: relative;
+    right: 200px;
+    width: 125%;
+}
+
+.aside-question_text {
+    padding: 5% 30%;
+}
+
+.feed-form_container {
+    margin-right: 200px;
+    background-color: #f5f5f5;
+    margin-bottom: 50px;
+}
+
+.feed-form_container h2 {
+    font-size: 50px;
+    padding-left: 70px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+
+.feed-form_name-vk,
+.feed-form_radio-button,
+.feed-form_radioinput,
+.feed-form_radio {
+    display: flex;
+}
+
+
+
+.feed-form_name-vk {
+    justify-content: space-between;
+}
+
+.feed-form_name,
+.feed-form_vk,
+.feed-form_text {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_name,
+.form_vk {
+    width: 270px;
+    height: 45px;
+}
+
+.feed-form_name-vk label {
+    padding-bottom: 10px;
+}
+
+.feed-form_name {
+    margin-left: 70px;
+}
+
+.feed-form_vk {
+    margin-right: 70px;
+}
+
+.feed-form_name-vk,
+.feed-form_text,
+.feed-form_radio-button {
+    padding-bottom: 20px;
+}
+
+.feed-form_text {
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.feed-form_radio-button {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feed-form_radio {
+    flex-direction: column;
+    margin-left: 70px;
+}
+
+.feed-button {
+    margin-right: 70px;
+    width: 155px;
+    height: 45px;
+}
+
+
+
+
+
+
+
+
+
